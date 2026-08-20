@@ -1,0 +1,11 @@
+---
+import { site } from '../data/site.js';
+---
+<div class="topbar">
+  <span class="topbar__baseline">{site.baseline}</span>
+  <span class="topbar__baseline topbar__baseline--short">{site.baselineShort}</span>
+  <span class="topbar__contact">
+    <a href={site.phoneHref}>{site.phone}</a>
+    <a href={`mailto:${site.email}`}>{site.email}</a>
+  </span>
+</div>

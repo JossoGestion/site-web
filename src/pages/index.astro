@@ -1,0 +1,251 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site.js';
+import { stats } from '../data/stats.js';
+import { services } from '../data/services.js';
+import { steps } from '../data/steps.js';
+import { testimonials } from '../data/testimonials.js';
+import { faq } from '../data/faq.js';
+---
+<Base
+  title="JOSSO Gestion · Conseil indépendant en gestion de patrimoine"
+  description="Vivien Josso, conseiller en gestion de patrimoine indépendant. Création, augmentation et gestion de patrimoine pour les particuliers et les entreprises. Premier échange de 45 minutes offert."
+>
+<main id="main">
+    <span id="top"></span>
+
+    <!-- ── Hero ─────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="eyebrow">/ Patrimoine pour tous</p>
+        <h1>Création, augmentation,<br /><em>gestion.</em></h1>
+        <p class="lede">Avoir du patrimoine n’est plus réservé à une élite. C’est une affaire de méthode, de temps et de décisions prises au bon moment.</p>
+        <p class="lede">Ensemble, nous construisons une stratégie claire, performante et sur mesure, pour préparer votre avenir et celui de vos proches.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href={site.booking} target="_blank" rel="noopener">Prendre rendez-vous</a>
+          <a class="btn btn--ghost" href="#contact">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <figure class="hero__shot hero__shot--tall">
+          <img src="/assets/couple.avif" alt="Un jeune couple sur la terrasse de sa maison" width="2070" height="1380" fetchpriority="high" decoding="async" />
+        </figure>
+        <div class="hero__stack">
+          <figure class="hero__shot">
+            <img src="/assets/horizon.avif" alt="Un dirigeant face à la baie vitrée de son bureau, vue sur la ville" width="1100" height="1027" decoding="async" />
+          </figure>
+          <div class="hero__logo">
+            <img src="/assets/jg-logo.webp" alt="Josso Gestion" width="2048" height="1905" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Repères ──────────────────────────────────────── -->
+    {stats.length > 0 && (
+    <ul class="stats" data-reveal-group>
+      <li><strong>45 min</strong>Premier échange offert</li>
+      <li><strong>48 h</strong>Délai de réponse</li>
+      <li><strong>Sur mesure</strong>Chaque situation est unique</li>
+      <li><strong>Indépendant</strong>Pas de catalogue imposé</li>
+    </ul>
+    )}
+
+    <!-- ── Services ─────────────────────────────────────── -->
+    <section class="section" id="services">
+      <div class="section__head">
+        <p class="eyebrow">/ Services</p>
+        <h2>Qui j’accompagne</h2>
+        <p class="section__intro">Deux situations, une même exigence : comprendre ce que vous faites de votre argent et décider en connaissance de cause.</p>
+      </div>
+
+      {services.length > 0 && (
+      <div class="services" data-reveal-group>
+        <article class="service">
+          <h3>Particuliers</h3>
+          <p>Épargner utilement, préparer sa retraite, protéger ses proches : pas besoin d’un gros patrimoine pour s’y mettre, il faut surtout comprendre ce qu’on signe.</p>
+          <ul class="rows">
+            <li>Comprendre où va votre argent, et pourquoi</li>
+            <li>Choisir les bonnes enveloppes : assurance-vie, PER, immobilier</li>
+            <li>Réduire l’impôt sans prendre de risque inutile</li>
+            <li>Avancer à votre rythme, avec un point chaque année</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <h3>Entreprises</h3>
+          <p>TPE, PME, professions libérales : vous portez tout, souvent seul. Quelques arbitrages mal réglés peuvent coûter des mois de trésorerie.</p>
+          <ul class="rows">
+            <li>Vous rémunérer à votre juste valeur</li>
+            <li>Optimiser trésorerie, fiscalité et statut</li>
+            <li>Protéger votre famille et votre activité</li>
+            <li>Préparer la cession ou la transmission</li>
+          </ul>
+        </article>
+      </div>
+      )}
+    </section>
+
+    <!-- ── Méthode ──────────────────────────────────────── -->
+    <section class="method" id="methode">
+      <p class="eyebrow eyebrow--light">/ Méthode</p>
+      <h2>Un accompagnement <br class="br-mobile" />sur-mesure</h2>
+
+      {steps.length > 0 && (
+      <ol class="steps" data-reveal-group>
+        <li>
+          <span class="steps__num">01</span>
+          <h3>Échange découverte</h3>
+          <p>45 minutes, offertes. Votre situation, vos objectifs, votre horizon.</p>
+        </li>
+        <li>
+          <span class="steps__num">02</span>
+          <h3>Bilan patrimonial</h3>
+          <p>Analyse écrite de votre situation actuelle et des marges de manœuvre.</p>
+        </li>
+        <li>
+          <span class="steps__num">03</span>
+          <h3>Rapport de conseil</h3>
+          <p>Des solutions sélectionnées pour vous, avec leurs buts et leurs avantages.</p>
+        </li>
+        <li>
+          <span class="steps__num">04</span>
+          <h3>Suivi annuel</h3>
+          <p>La vie change, la stratégie aussi. Un point de suivi au minimum chaque année.</p>
+        </li>
+      </ol>
+      )}
+
+      <a class="btn btn--cream" href={site.booking} target="_blank" rel="noopener">Commencer par l’échange découverte</a>
+    </section>
+
+    <!-- ── Avis ─────────────────────────────────────────── -->
+    {testimonials.length > 0 && (
+    <section class="section" id="avis">
+      <div class="section__head">
+        <p class="eyebrow">/ Avis clients</p>
+        <h2>Retours d’expérience</h2>
+      </div>
+
+      <div class="marquee" data-marquee>
+        <div class="marquee__track" data-marquee-track>
+          {testimonials.map((t) => (
+            <figure class={t.wide ? 'quote quote--wide' : 'quote'}>
+              <p class="quote__stars" aria-label="Note : 5 sur 5">★★★★★</p>
+              <blockquote lang={t.lang}>
+                {t.paragraphs.map((p) => <p set:html={p} />)}
+              </blockquote>
+              <figcaption>
+                {t.photo
+                  ? <img class="avatar avatar--photo" src={t.photo} alt="" width="44" height="44" loading="lazy" decoding="async" />
+                  : <span class="avatar" aria-hidden="true">{t.initials}</span>}
+                {t.name}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+    )}
+
+    <!-- ── Qui vous accompagne ──────────────────────────── -->
+    <section class="about" id="apropos">
+      <div class="about__portrait" data-reveal="fade">
+        <img src="/assets/vivien-crop.avif" alt="Portrait de Vivien Josso" width="1215" height="1496" loading="lazy" decoding="async" />
+      </div>
+      <div class="about__text" data-reveal style="--index:1">
+        <p class="eyebrow">/ Qui vous accompagne</p>
+        <h2>Vivien Josso</h2>
+        <p class="about__role">Conseiller en Gestion de Patrimoine indépendant</p>
+        <p>J’ai passé les premières années de ma vie à papillonner avec mon argent, sans avoir pleinement conscience de cet outil, qui allait et venait entre mes mains.</p>
+        <p>Puis, un jour, autour de ma trentième année, j’ai voulu acheter ma propre maison, j’ai commencé à penser à la retraite… Mais, rien, je n’avais rien préparé, rien épargné&nbsp;!</p>
+        <p>Il m’a fallu partir de zéro, et avant tout, apprendre et comprendre ce qu’était ce tabou en France, et comment l’utiliser avec intelligence.</p>
+        <p>Si cette situation vous est familière, alors, c’est très bien.<br />C’est pour vous faire gagner du temps, des connaissances et donc de l’argent, que nous devons nous rencontrer&nbsp;!</p>
+      </div>
+    </section>
+
+    <!-- ── FAQ ──────────────────────────────────────────── -->
+    {faq.length > 0 && (
+    <section class="faq" id="faq">
+      <p class="eyebrow">/ FAQ</p>
+      <h2>Ce qu’on me demande souvent</h2>
+
+      <div class="faq__list" data-reveal-group>
+        <details>
+          <summary><span>Faut-il déjà avoir un patrimoine important&nbsp;?</span><span class="chev" aria-hidden="true">+</span></summary>
+          <p>Au contraire : c’est justement quand le patrimoine se construit que les bons choix comptent le plus. Quelques centaines d’euros par mois suffisent pour commencer, et beaucoup de mes clients ont démarré ainsi. Sur quinze ou vingt ans, ce qui fait la différence, c’est la régularité et la cohérence des décisions, à votre rythme.</p>
+        </details>
+        <details>
+          <summary><span>Le premier rendez-vous est-il payant&nbsp;?</span><span class="chev" aria-hidden="true">+</span></summary>
+          <p>Non, il est offert et dure environ 45 minutes. C’est un temps d’écoute : votre situation, vos projets, ce qui vous inquiète. Vous repartez avec un premier avis clair, sans engagement, même si vous décidez de ne pas aller plus loin.</p>
+        </details>
+        <details>
+          <summary><span>Quelle différence avec ma banque&nbsp;?</span><span class="chev" aria-hidden="true">+</span></summary>
+          <p>Votre banque vous propose ce qu’elle a en rayon. Indépendant, je compare les contrats de plusieurs partenaires et je retiens celui qui correspond à votre situation, en vous expliquant pourquoi. Vous gardez le même interlocuteur, qui connaît l’historique de vos décisions. Il regarde l’ensemble de votre patrimoine et construit une stratégie globale, pour vous et vos proches.</p>
+        </details>
+        <details>
+          <summary><span>Où se déroulent les rendez-vous&nbsp;?</span><span class="chev" aria-hidden="true">+</span></summary>
+          <p>En visioconférence partout en France, ou en présentiel si vous êtes en Île-de-France. Un point de suivi est programmé au minimum une fois par an et vous pouvez m’appeler entre deux.</p>
+        </details>
+      </div>
+    </section>
+    )}
+
+    <!-- ── Contact ──────────────────────────────────────── -->
+    <section class="contact" id="contact">
+      <div class="contact__intro" data-reveal>
+        <p class="eyebrow">/ Contact</p>
+        <h2>Parlons de votre situation</h2>
+        <p class="contact__lede">Quelques lignes suffisent : votre situation, vos questions. J’y répondrai personnellement sous 48h ouvrées.</p>
+        <div class="contact__links">
+          <a href="tel:+33689907116">06 89 90 71 16</a>
+          <a href="mailto:jossogestion@gmail.com">jossogestion@gmail.com</a>
+        </div>
+      </div>
+
+      <form data-reveal style="--index:1" class="contact__form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value={site.web3formsKey} />
+        <input type="hidden" name="subject" value="Nouvelle demande depuis le site JOSSO Gestion" />
+        <input type="hidden" name="from_name" value="Site JOSSO Gestion" />
+        {/* Piège à robots : invisible pour les humains, rempli par les scripts. */}
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
+        <label class="field">
+          <span class="field__label">Nom et prénom</span>
+          <input type="text" name="name" autocomplete="name" placeholder="Nom et prénom" required />
+        
+          <p class="field__error">Indiquez votre nom et prénom.</p>
+        </label>
+        <label class="field">
+          <span class="field__label">Email</span>
+          <input type="email" name="email" autocomplete="email" placeholder="Email" required />
+        
+          <p class="field__error">Indiquez une adresse email valide, par exemple prenom@domaine.fr.</p>
+        </label>
+        <label class="field">
+          <span class="field__label">Téléphone</span>
+          <input type="tel" name="telephone" autocomplete="tel" placeholder="Téléphone" />
+        
+          <p class="field__error">Indiquez un numéro de téléphone valide.</p>
+        </label>
+        <label class="field">
+          <span class="field__label">Je suis</span>
+          <select name="profil">
+            <option value="">Je suis : particulier / chef d’entreprise</option>
+            <option>Particulier</option>
+            <option>Chef d’entreprise</option>
+            <option>Profession libérale</option>
+          </select>
+        </label>
+        <label class="field">
+          <span class="field__label">Votre message</span>
+          <textarea name="message" rows="4" placeholder="Votre message…" required></textarea>
+        
+          <p class="field__error">Décrivez votre situation en quelques lignes.</p>
+        </label>
+        <button class="btn btn--primary btn--block" type="submit">Envoyer ma demande</button>
+        <p class="form-note" data-form-note role="status"></p>
+      </form>
+    </section>
+  </main>
+</Base>

@@ -1,0 +1,23 @@
+---
+import { site, nav, navMobile } from '../data/site.js';
+---
+<header class="header">
+  <a class="brand" href="/">
+    <span class="brand__mark"><img src="/assets/jg-logo.webp" alt="" width="27" height="25" /></span>
+    <span class="brand__name">JOSSO <em>Gestion</em></span>
+  </a>
+
+  <nav class="nav" aria-label="Navigation principale">
+    {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+    <a class="btn btn--primary btn--sm" href={site.booking} target="_blank" rel="noopener">Prendre rendez-vous</a>
+  </nav>
+
+  <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu" aria-label="Navigation mobile" hidden>
+  {navMobile.map((item) => <a href={item.href}>{item.label}</a>)}
+  <a class="btn btn--primary" href={site.booking} target="_blank" rel="noopener">Prendre rendez-vous</a>
+</nav>

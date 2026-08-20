@@ -1,0 +1,15 @@
+{
+  "name": "JOSSO Gestion",
+  "short_name": "JOSSO Gestion",
+  "description": "Conseil indépendant en gestion de patrimoine",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FCFBF6",
+  "theme_color": "#08222E",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,1 @@
+export const stats = [{"figure": "45 min", "label": "Premier échange offert"}, {"figure": "48 h", "label": "Délai de réponse"}, {"figure": "Sur mesure", "label": "Chaque situation est unique"}, {"figure": "Indépendant", "label": "Pas de catalogue imposé"}];
