@@ -1,11 +1,5 @@
+# Généré à chaque build, jamais versionné
 node_modules/
 dist/
 .astro/
 .DS_Store
-
-# Copies de travail antérieures à la migration Astro
-_legacy/
-
-# Le PNG du portrait n'est là que pour que la maquette d'origine
-# s'affiche localement. L'AVIF servi par le site fait 36 Ko.
-_design-source/assets/vivien-crop.png
