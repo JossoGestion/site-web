@@ -15,6 +15,7 @@ export const site = {
   linkedin: 'https://www.linkedin.com/in/vivien-josso/',
   instagram: 'https://www.instagram.com/jossogestion',
   siret: '533 230 652 00018',
+  orias: '23007775',
   legalUpdated: '19 août 2026',
 };
 
